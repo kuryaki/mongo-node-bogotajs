@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2><% if(error) { %><%= error %><% } %></h2>
+    <% if(cats.length > 0){ %>
+      <% cats.forEach(function(cat){ %>
+        <ul>
+          <li><%= cat.name %></li>
+        </ul>
+      <% }) %>
+    <% } %>
+    <form action="/cats" method="POST">
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name">
+      <button type="submit" >Add</button>
+    </form>
+  </body>
+</html>

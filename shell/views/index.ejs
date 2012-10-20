@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if(results.length > 0){ %>
+      <% results.forEach(function(doc){ %>
+        <ul>
+          <li><%= JSON.stringify(doc) %></li>
+        </ul>
+      <% }) %>
+    <% } %>
+  </body>
+</html>
